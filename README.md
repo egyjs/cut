@@ -7,18 +7,18 @@
 <h1/>
 
 ## TODO:
-### API
-- [x] create API js
-- [x] create API PHP
-
 ### SCRIPT SYSTEM
 - [x] create shortcut system
 - [ ] create user system 
 
+### API
+- [x] create API js
+- [x] create API PHP
+
 ### design
-- [ ] 
+- [ ] theme
 - [ ] Responsive design
 
 ### Design code
-- [ ] 
+- [ ] all of codes
 - [ ] Design include links and the heref
