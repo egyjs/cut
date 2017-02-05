@@ -17,6 +17,7 @@
 
 ### design
 - [ ] 
+- [ ] Responsive design
 
 ### Design code
 - [ ] 
