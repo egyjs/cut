@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 04, 2017 at 05:31 PM
+-- Generation Time: Feb 06, 2017 at 09:22 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -44,6 +44,28 @@ INSERT INTO `tbl_url` (`url_id`, `user_id`, `url_name`, `url_code`, `url_views`)
 (63, 74730342, 'https://www.youtube.com/', 'ab09a', NULL),
 (64, 74730342, 'https://www.facbook.com/', '1b1Eh', NULL);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_users`
+--
+
+CREATE TABLE `tbl_users` (
+  `user_id` int(11) NOT NULL,
+  `user_name` varchar(100) NOT NULL,
+  `user_email` varchar(100) NOT NULL,
+  `user_pass` varchar(100) NOT NULL,
+  `user_status` enum('Y','N') NOT NULL DEFAULT 'N',
+  `token_code` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_users`
+--
+
+INSERT INTO `tbl_users` (`user_id`, `user_name`, `user_email`, `user_pass`, `user_status`, `token_code`) VALUES
+(10, 'el3zahaby', 'el3zahaby@gmail.com', '2033e76cf04c6dfd098e2271edfc84cf', 'Y', 'ef2b9cc909ab1688ceec07df91ff4f5e');
+
 --
 -- Indexes for dumped tables
 --
@@ -55,6 +77,13 @@ ALTER TABLE `tbl_url`
   ADD PRIMARY KEY (`url_id`);
 
 --
+-- Indexes for table `tbl_users`
+--
+ALTER TABLE `tbl_users`
+  ADD PRIMARY KEY (`user_id`),
+  ADD UNIQUE KEY `user_email` (`user_email`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -63,6 +92,11 @@ ALTER TABLE `tbl_url`
 --
 ALTER TABLE `tbl_url`
   MODIFY `url_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+--
+-- AUTO_INCREMENT for table `tbl_users`
+--
+ALTER TABLE `tbl_users`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
