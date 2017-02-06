@@ -9,7 +9,7 @@
 ## TODO:
 ### SCRIPT SYSTEM
 - [x] create shortcut system
-- [ ] create user system 
+- [x] create user system [90%](https://github.com/el3zahaby/CutterScript/commit/70bf0035b9c7b9f4f99a0e2b8a69f1d98a870b87#commitcomment-20770159)
 
 ### API
 - [x] create API js
