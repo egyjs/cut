@@ -3,17 +3,16 @@
 }
 
 body {
-    background: url(images/bg.png);
-    -webkit-animation: 100s scroll infinite linear;
+    background: url(http://cdn.wallpapersafari.com/22/46/mXCltH.jpg);
+    -webkit-animation: 100s scroll infinite linear; 
     -moz-animation: 100s scroll infinite linear;
     -o-animation: 100s scroll infinite linear;
-    animation: 100s scroll infinite linear;
+    animation: 100s scroll infinite cubic-bezier(0.25, 0.1, 0.08, 1.11);
     width: 100%;
     height: 100%;
     font-family: 'Dosis', sans-serif;
     margin: auto;
     padding: 0;
-
 }
 
 a {
@@ -38,8 +37,11 @@ a {
 }
 
 .logo {
-    max-height: 85%;
     animation: bounceIn 0.6s;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 83px;
 }
 
 .logo:hover {
@@ -378,6 +380,148 @@ input[name="url"]:focus {
     border-left: 5px solid #16a085;
     -webkit-transition: 0.4s ease;
 }
+
+
+
+body{
+  padding:0;
+  margin:0;
+}
+.vid-container{
+  height:100vh;
+  overflow:hidden;
+}
+
+
+.inner-container{
+  width:400px;
+  height:400px;
+  position:absolute;
+  top:calc(50vh - 200px);
+  left:calc(50vw - 200px);
+  overflow:hidden;
+}
+.box{
+  position:absolute;
+  height:100%;
+  width:100%;
+  font-family:Helvetica;
+  color:#fff;
+  background:rgba(0,0,0,0.13);
+  padding:30px 0px;
+}
+.box h1{
+  text-align:center;
+  margin:30px 0;
+  font-size:30px;
+}
+.box input{
+  display:block;
+  width:300px;
+  margin:20px auto;
+  padding:15px;
+  background:rgba(0,0,0,0.2);
+  color:#fff;
+  border:0;
+}
+.box input:focus,.box input:active,.box button:focus,.box button:active{
+  outline:none;
+}
+button{
+  background:#742ECC;
+}
+button:active{
+  background:#27ae60;
+}
+.box button{
+  background:#742ECC;
+  border:0;
+  color:#fff;
+  padding:10px;
+  font-size:20px;
+  width:330px;
+  margin:20px auto;
+  display:block;
+  cursor:pointer;
+}
+.box button:active{
+  background:#27ae60;
+}
+.box p{
+  font-size:14px;
+  text-align:center;
+}
+.box p span{
+  cursor:pointer;
+  color:#666;
+}
+div.alert-message {
+	display: block;
+	padding: 13px 12px 12px;
+	font-weight: bold;
+	font-size: 14px;
+	color: white;
+	background-color: #2ba6cb;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	margin-bottom: 12px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+	text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+	position: relative;
+}
+div.alert-message .box-icon {
+	display: block;
+	float: left;
+	background-image: url('images/icon.box.png');
+	width: 30px;
+	height: 25px;
+	margin-top: -2px;
+	background-position: -8px -8px;
+}
+div.alert-message p {
+	margin: 0px;
+}
+div.alert-message.success {
+	background-color: #5da423;
+	color: #fff;
+	text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+}
+div.alert-message.success .box-icon {
+	background-position: -48px -8px;
+}
+div.alert-message.warning {
+	background-color: #e3b000;
+	color: #fff;
+	text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+}
+div.alert-message.warning .box-icon {
+	background-position: -88px -8px;
+}
+div.alert-message.error {
+	background-color: #c60f13;
+	color: #fff;
+	text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+}
+div.alert-message.error .box-icon {
+	background-position: -128px -8px;
+}
+div.alert-message a.close {
+    color: #333;
+    position: absolute;
+    right: 2px;
+    top: -12px;
+    font-size: 50px;
+    opacity: 0.2;
+    padding: 4px;
+}
+div.alert-message a.close:hover, div.alert-box a.close:focus {
+	opacity: 0.4;
+}
+          
+
 
 @keyframes bounceIn {
     0% {

@@ -1,11 +1,15 @@
 <?php
 session_start();
 include_once("class/url.php");
+include_once("class/user.php");
 
 
 
 
 $urlClass = new URL();
+$user = new USER();
+
+
 $urlInput = @$urlClass->security_input($_POST['urlInput']);
 $urlInput = $urlClass->addhttp($urlInput);
 $urlClass->checkurl($urlInput);
@@ -19,7 +23,15 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 }
 
 
+if ($user->is_logged_in()!="") {
+$Ustmt = $user->runQuery("SELECT * FROM tbl_users WHERE user_id=:uid");
+$Ustmt->execute(array(":uid"=>$_SESSION['userSession']));
+$Urow = $Ustmt->fetch(PDO::FETCH_ASSOC);
+$u = "1";
+}
+// if (isset($u)) {echo $Urow['user_name'];}
 ?>
+
 
 <!DOCTYPE html>
 <?php if(!isset($_GET['f'])){ ?>
