@@ -20,5 +20,4 @@
 - [ ] Responsive design
 
 ### Design code
-- [ ] all of codes
-- [ ] Design include links and the heref
+- [ ] [ ] MVC System
