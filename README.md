@@ -9,15 +9,15 @@
 ## TODO:
 ### SCRIPT SYSTEM
 - [x] create shortcut system
-- [x] create user system [90%](https://github.com/el3zahaby/CutterScript/commit/70bf0035b9c7b9f4f99a0e2b8a69f1d98a870b87#commitcomment-20770159)
+- [x] create user system 
 
 ### API
 - [x] create API js
-- [x] create API PHP
+- [ ] create API PHP
 
 ### design
-- [ ] theme
-- [ ] Responsive design
+- [x] theme
+- [x] Responsive design
 
 ### Design code
-- [ ] [ ] MVC System
+- [x] MVC System
