@@ -1,7 +1,0 @@
-body{
-    animation-name: bounceIn;
-    -webkit-animation: 1s bounceIn linear;
-    -moz-animation: 1s bounceIn linear;
-    -o-animation: 1s bounceIn linear;
-    animation: 1s bounceIn linear;
-}
