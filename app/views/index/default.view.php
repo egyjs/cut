@@ -22,7 +22,7 @@
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <input type="url" class="form-control" placeholder="http://" name="link" id="copyText"  
-                                    <?php echo 'value="'.$_SESSION['urlresult'].'"'; ?>>
+                                    <?php echo 'value="'.@$_SESSION['urlresult'].'"'; ?>>
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>

@@ -12,8 +12,9 @@
 }  else { ?>  
         <title><?php echo $this->myFunction->get_title( $this->row1['l_name'] ); ?></title>
         <link rel="shortcut icon" href="<?php echo $this->myFunction->get_icon( $this->row1['l_name'],$this->row1['l_name'] ); ?>">
-<?php } ?>
-<?php var_dump($this->_controller) ?>
+
+            <?php } ?>
+
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo CSSBOOT; ?>" rel="stylesheet">
 
@@ -53,6 +54,13 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
+                    <?php  if($this->_controller == "to"){ ?>
+                    <li class="page-scroll" id="rep">
+                        <a class="btn-4" ><span class="" id='count'>5</span></a>
+                    </li>
+                        
+                    </li>                        
+                    <?php }else{ ?>
                     <?php if($this->user_login->is_logged_in() == ""){ ?>
                     <li class="page-scroll">
                         <a href="signup"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Sign up</a>
@@ -101,7 +109,9 @@
                                 <li role="presentation"><a href="#"><i class="fa fa fa-handshake-o" ></i>&nbsp;My API</a></li>
                             </ul>
                     </li>
-                  <?php } ?>
+                  <?php }
+                  
+                    } ?>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
