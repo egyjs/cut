@@ -22,6 +22,26 @@ window.onload = function(){
 
 })();
 
+(function(){
+  var counter = 5;
+
+  setInterval(function() {
+    counter--;
+    if (counter >= 1) {
+      span = document.getElementById("count-mob");
+      span.innerHTML = counter;
+    }
+    // Display 'counter' wherever you want to display it.
+    if (counter === 0) {
+        var div = "<a class='btn-5'  href='<?php echo $this->row1['l_name']; ?>'><span class='fa fa-forward skip' aria-hidden='true'></a>"
+        document.getElementById("rep-mob").innerHTML = div;
+        clearInterval(counter);
+    }
+
+  }, 1000);
+
+})();
+
 }
 
 </script>
