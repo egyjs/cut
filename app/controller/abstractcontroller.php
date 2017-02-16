@@ -24,6 +24,7 @@ class abstractController{
     
     public $Urow;
     public $Lname;
+    public $Fname;
     
     
     
@@ -40,8 +41,9 @@ class abstractController{
             $Ustmt = $this->user_login->runQuery("SELECT * FROM users WHERE u_id=:uid");
             $Ustmt->execute(array(":uid"=>$_SESSION['userSession']));
             $this->Urow = $Ustmt->fetch(\PDO::FETCH_ASSOC);
-            $this->Lname = explode(" ", $this->Urow['u_name']);
-            $this->Lname = $this->Lname[1];
+            $nameOfUser = explode(" ", $this->Urow['u_name']);
+            $this->Lname = $nameOfUser[1];
+            $this->Fname = $nameOfUser[0];
         }
         
         if(isset($_POST['supnavlogin'])){

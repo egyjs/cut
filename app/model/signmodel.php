@@ -47,7 +47,7 @@ class SignModel {
     return $url;
     }
 
-     public function register($name,$username,$email,$pass)
+     public function register($name,$username,$email,$pass,$country,$loc)
              // ,$email,$upass,$code
             // ,user_email,user_pass,token_code
            // , :user_mail, :user_pass, :active_code
@@ -55,12 +55,14 @@ class SignModel {
       try
       {       
        $password = md5($pass);
-       $stmt = $this->conn->prepare("INSERT INTO users(u_name,u_username,u_pass,u_email) 
-                                                    VALUES(:uname,:uusername,:upass,:uemail)");
+       $stmt = $this->conn->prepare("INSERT INTO users(u_name,u_username,u_pass,u_email,u_country,u_loc) 
+                                                    VALUES(:uname,:uusername,:upass,:uemail,:ucntry,:uloc)");
        $stmt->bindparam(":uname",$name);
        $stmt->bindparam(":uusername",$username);
        $stmt->bindparam(":upass",$password);
        $stmt->bindparam(":uemail",$email);
+       $stmt->bindparam(":ucntry",$country);
+       $stmt->bindparam(":uloc",$loc);
        $stmt->execute(); 
        return $stmt;
       }

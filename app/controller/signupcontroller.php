@@ -22,6 +22,10 @@ class SignupController extends abstractController {
             $username = $this->myFunction->security_input($_POST['username']);
             $email = $this->myFunction->security_input($_POST['email']);
             $pass = $this->myFunction->security_input($_POST['password']);
+            $country = $this->myFunction->ip_details($this->myFunction->get_user_ip());
+            
+            $ucountry = $country->country.",".$country->region;
+            $uloc = $country->loc;
             
             
             
@@ -52,7 +56,7 @@ class SignupController extends abstractController {
                             <strong>Oh Cut!</strong> Username is already in use, please change it. 😨
                             </div>';                    
                 
-                    }elseif ($this->user_login->register($name, $username, $email, $pass)) {
+                    }elseif ($this->user_login->register($name,$username,$email,$pass,$ucountry,$uloc)) {
                 $this->msg =''.
                             '<div class="alert alert-success" role="alert"> 
                             <strong>Done !</strong> We\'ve joined us successfully 😃

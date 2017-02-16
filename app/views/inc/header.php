@@ -38,7 +38,7 @@
 <body id="page-top" class="index">
 
     <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom affix">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom affix">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
@@ -103,9 +103,9 @@
                     </li>
                     <?php }  else { ?>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;<?php echo $this->Lname; ?><span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;<?php if(isset($this->Lname)){echo $this->Lname;}else{echo $this->Fname;} ?><span class="caret"></span></a>
                             <ul  id="login-dp" class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                                <li role="presentation"><a href="#"><i class="fa fa fa-gear" aria-hidden="true"></i>&nbsp;My Account</a></li>
+                                <li role="presentation"><a href="account"><i class="fa fa fa-gear" aria-hidden="true"></i>&nbsp;My Account</a></li>
                                 <li class="page-scroll"><a href="logout"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Logout</a></li>
                                 <li role="presentation" class="divider"></li>
                                 <li role="presentation"><a href="#"><i class="fa fa fa-handshake-o" ></i>&nbsp;My API</a></li>

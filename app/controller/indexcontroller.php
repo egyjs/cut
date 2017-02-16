@@ -24,7 +24,11 @@ class IndexController extends abstractController {
                     
                 }else {
                     $url_code = $this->myFunction->getUrlRand(5);
+                    if($this->user_login->is_logged_in() == ""){
                     $this->url->shortURL($urlInput,$url_code);
+                    }else{
+                        $this->url->shortforUser($urlInput,$url_code,$_SESSION['userSession']);
+                    }
                     if ($this->myFunction->checkurl == "NOT VALID") {
                        $this->msg = '<span><div class="alert alert-warning" role="alert">Please enter a valid URL.!!</div></span>';
                     }  else {
